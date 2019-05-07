@@ -8,6 +8,8 @@ import dash_table
 from pages import register_callbacks, get_no_page, get_overview_page, get_exposure_summary_page, get_ep_curve_page, get_portfolio_impact_page
 
 app = dash.Dash(__name__)
+server=app.server
+server.secret_key = os.environ.get('secret_key', 'secret')
 app.config['suppress_callback_exceptions']=True
 
 def load_dataframe(filename):
