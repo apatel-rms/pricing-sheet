@@ -30,13 +30,13 @@ register_callbacks(app, key_losses)
 @app.callback(dash.dependencies.Output('page-content', 'children'),
             [dash.dependencies.Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname == '/report' or pathname == '/report/overview':
+    if pathname == '/' or pathname == '/overview':
         return get_overview_page(company_facts, key_losses)
-    if pathname == '/report/exposure-summary':
+    if pathname == '/exposure-summary':
         return get_exposure_summary_page(loc)
-    if pathname == '/report/ep-curves':
+    if pathname == '/ep-curves':
         return get_ep_curve_page(ep_curves)
-    if pathname == '/report/portfolio-impact':
+    if pathname == '/portfolio-impact':
         return get_portfolio_impact_page()
     else:
         return get_no_page()

@@ -39,13 +39,13 @@ def get_header(company_name):
 def get_menu():
     menu = html.Div([
 
-        dcc.Link('Overview   ', href='/report/overview', className="tab first"),
+        dcc.Link('Overview   ', href='/overview', className="tab first"),
 
-        dcc.Link('Exposure Summary   ', href='/report/exposure-summary', className="tab"),
+        dcc.Link('Exposure Summary   ', href='/exposure-summary', className="tab"),
 
-        dcc.Link('EP curves   ', href='/report/ep-curves', className="tab"),
+        dcc.Link('EP curves   ', href='/ep-curves', className="tab"),
 
-        dcc.Link('Portfolio Impact   ', href='/report/portfolio-impact', className="tab"),
+        # dcc.Link('Portfolio Impact   ', href='/portfolio-impact', className="tab"),
 
     ], className="row ")
     return menu
