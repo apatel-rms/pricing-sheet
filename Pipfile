@@ -9,6 +9,7 @@ verify_ssl = true
 pandas = "*"
 dash = "*"
 dash-daq = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
